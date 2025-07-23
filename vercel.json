@@ -6,11 +6,12 @@
       "use": "@vercel/static-build",
       "config": {
         "distDir": "frontend/dist",
-        "buildCommand": "npm run build"
+        "buildCommand": "cd frontend && npm install && npm run build"
       }
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/frontend/dist/$1", "handle": "filesystem" }
+    { "src": "/(assets|css|js|img)/.*", "dest": "/frontend/dist/$1" },
+    { "src": "/(.*)", "dest": "/frontend/dist/index.html" }
   ]
 }
