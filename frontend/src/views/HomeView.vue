@@ -35,7 +35,7 @@ import { ref } from 'vue'
 import Door from '../components/Door.vue'
 import ModuleContent from '../components/ModuleContent.vue'
 
-const activeModule = ref(null)
+const activeModule = ref('intro')
 
 const doors = [
   { key: 'intro', label: '个人简介', icon: '🧍' },

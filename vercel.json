@@ -1,17 +1,7 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist",
-        "buildCommand": "npm run build"
-      }
-    }
-  ],
+  "outputDirectory": "frontend/dist",
   "routes": [
-    { "src": "/(assets|css|js|img)/.*", "dest": "/dist/$1" },
-    { "src": "/(.*)", "dest": "/dist/index.html" }
+    { "src": "/(assets|css|js|img|fonts)/.*", "dest": "/frontend/dist/$1" },
+    { "src": "/(.*)", "dest": "/frontend/dist/index.html" }
   ]
 }
