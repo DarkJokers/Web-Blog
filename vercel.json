@@ -11,7 +11,7 @@
     }
   ],
   "routes": [
-    { "src": "/(assets|css|js|img)/.*", "dest": "/dist/$1" },
+    { "src": "/(assets|css|js|img)/.*", "dest": "/frontend/dist/$1" },
     { "src": "/(.*)", "dest": "/dist/index.html" }
   ]
 }
